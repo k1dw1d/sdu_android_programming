@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,8 +32,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
      */
     @Override
     public CustomAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        TextView tv = (TextView) LayoutInflater.from(parent.getContext()).inflate(R.layout.random_textview, parent, false);
-        ViewHolder vh = new ViewHolder(tv);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.random_textview, parent, false);
+        TextView tv = v.findViewById(R.id.test_tv);
+        ViewHolder vh = new ViewHolder(v, tv);
         return vh;
     }
 
@@ -65,9 +67,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView textView;
+        public View frameLayout;
 
-        public ViewHolder(TextView v) {
-            super(v);
+        public ViewHolder(View frameLayout,TextView v) {
+            super(frameLayout);
             textView = v;
         }
     }

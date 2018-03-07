@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:fontFamily="casual"
-    android:textColor="#5cb3ff"
-    android:textAlignment="center">
-</TextView>
+    >
+    <TextView
+        android:id="@+id/test_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textColor="#5cb3ff"
+        android:layout_gravity="center"
+        android:textAlignment="center">
+    </TextView>
+
+</FrameLayout>

@@ -17,10 +17,13 @@ public class GreenFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    //public void
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_green,container,false);
+
         return v;
     }
 
@@ -28,5 +31,9 @@ public class GreenFragment extends Fragment {
     public void onPause() {
         //DO NOTHING
         super.onPause();
+    }
+
+    interface GreenFragmentListener{
+        void buttonClicked();
     }
 }
