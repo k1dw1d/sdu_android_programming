@@ -4,8 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.programming.adnroid.sdu.activities_exercise_1.NameActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context="com.programming.adnroid.sdu.activities_exercise_1.NameActivity">
+
+    <TextView
+        android:id="@+id/tvWriteYourName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Pick you birth date"
+        app:layout_constraintBottom_toTopOf="@+id/dateOfBirthPicker"
+        app:layout_constraintStart_toStartOf="@+id/dateOfBirthPicker" />
+
+    <DatePicker
+        android:id="@+id/dateOfBirthPicker"
+        android:layout_width="274dp"
+        android:layout_height="382dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnNext"
@@ -26,26 +45,6 @@
         android:text="Previous"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tvWriteYourName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Write your address"
-        app:layout_constraintBottom_toTopOf="@+id/etYourAddress"
-        app:layout_constraintStart_toStartOf="@+id/etYourAddress" />
-
-    <EditText
-        android:id="@+id/etYourAddress"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
 
 
 </android.support.constraint.ConstraintLayout>
