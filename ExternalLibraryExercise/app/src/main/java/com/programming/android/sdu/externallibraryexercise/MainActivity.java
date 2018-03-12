@@ -18,7 +18,6 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     public class RandomPicturesAdapter extends RecyclerView.Adapter<RandomPicturesAdapter.ViewHolder> {
-        private Map<Integer, String> mDataset = new HashMap<>();
         private Context context;
 
         public  class ViewHolder extends RecyclerView.ViewHolder {
