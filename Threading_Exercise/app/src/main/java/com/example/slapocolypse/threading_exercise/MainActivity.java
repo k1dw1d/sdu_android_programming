@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     try {
-                        Thread.sleep(5000);
+                        Thread.sleep(8000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-
+        running = false;
         super.onDestroy();
         try {
             workerThread.join();
