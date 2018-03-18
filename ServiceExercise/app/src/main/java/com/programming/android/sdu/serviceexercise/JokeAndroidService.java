@@ -40,7 +40,6 @@ public class JokeAndroidService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.i("thread_test", "onStartCommand");
         if(!running) {
             running = true;
             Retrofit retrofit = new Retrofit.Builder().baseUrl(url)
@@ -87,7 +86,6 @@ public class JokeAndroidService extends Service {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Log.i("thread_test", "after join");
         super.onDestroy();
 
     }
